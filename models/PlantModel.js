@@ -11,13 +11,17 @@ const ObjectId = Schema.ObjectId;
 const PlantData = new Schema({
    objectId: ObjectId,
     name: [{ type: String, trim: true}],
-   description: String,
-   light: String,
-   water: String,
-   disease: [{ type: String}],
-   diseaseDescription: [{ type: String}],
-   diseaseTreatment: [{ type:String}],
-   resistantStrains: [{ type: String}]
+    description: String,
+    light: String,
+    lightNum: Number,
+    water: String,
+    waterNum: Number,
+    phNum: Number,
+    germination: String,
+    disease: [{ type: String}],
+    diseaseDescription: [{ type: String}],
+    diseaseTreatment: [{ type:String}],
+    resistantStrains: [{ type: String}]
 });
 
 
