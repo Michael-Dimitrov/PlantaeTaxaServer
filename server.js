@@ -5,10 +5,7 @@ const app = express();
 const bodyParser = require('body-parser');
 const mongo = require('mongoose');
 
-// Todo:
-// 1. Use .env file for grabbing user and password for the database :) don't forget to do that before making any of this code public
-
-
+app.set('trust proxy', true);
 app.use(bodyParser.urlencoded({
     extended: true
 }));
@@ -33,9 +30,9 @@ else
     console.log("Connected to datbase.");
 
 // Set up the port
-var port = process.env.PORT || 4000;
-app.listen(4000, function() {
-    console.log('listening on 4000');
+var port = process.env.PORT;
+app.listen(port, function() {
+    console.log('listening on '+ port);
 })
 
 //Default route
