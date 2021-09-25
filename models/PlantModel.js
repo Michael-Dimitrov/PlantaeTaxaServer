@@ -12,6 +12,7 @@ const PlantData = new Schema({
    objectId: ObjectId,
     name: [{ type: String, trim: true}],
     description: String,
+    imageURLs: [{ type: String}],
     light: String,
     lightNum: Number,
     water: String,
